@@ -1,3 +1,5 @@
+import 'App.module.scss';
+
 function App() {
   return (
     <div id='page'>
