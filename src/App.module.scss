@@ -9,3 +9,36 @@ footer {
 .conteudo {
   width: 1709px;
 }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  height: 173px;
+
+  .conteudo {
+    display: flex;
+    align-items: center;
+
+  }
+
+  nav {
+    display: inline-block;
+
+    ul li {
+      display: inline-block;
+
+      &:last-of-type {
+        margin-right: 0px;
+      }
+
+      &:first-of-type {
+        margin-left: 0px;
+      }
+    }
+  }
+}
