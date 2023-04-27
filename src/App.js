@@ -1,4 +1,4 @@
-import 'App.module.scss';
+import './App.module.scss';
 
 function App() {
   return (
@@ -18,8 +18,8 @@ function App() {
               <li>Collections</li>
               <li>Sale</li>
               <li>Blog</li>
-              <li><img src='bx_bx-cart-alt.png' widtc='24' height='24' /></li>
-              <li><img src='bx_bx-shopping-bag.png' widtc='24' height='24' /></li>
+              <li><img src='carrinho.png' widtc='24' height='24' /></li>
+              <li><img src='sacola.png' widtc='24' height='24' /></li>
             </ul>
           </nav>
         </div>
