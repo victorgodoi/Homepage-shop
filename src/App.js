@@ -18,8 +18,8 @@ function App() {
               <li>Collections</li>
               <li>Sale</li>
               <li>Blog</li>
-              <li><img src='carrinho.png' widtc='24' height='24' /></li>
-              <li><img src='sacola.png' widtc='24' height='24' /></li>
+              <li><img src='/images/carrinho.png' widtc='24' height='24' /></li>
+              <li><img src='/images/sacola.png' widtc='24' height='24' /></li>
             </ul>
           </nav>
         </div>
