@@ -1,11 +1,16 @@
-import './App.module.scss';
+import styled from './App.module.scss';
+
+/*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
+"import './App.scss';"
+<div id = "nomeDoId"></div>
+*/
 
 function App() {
   return (
-    <div id='page'>
+    <div id={styled.page}>
       <header>
-        <div className='conteudo'>
-          <div>
+        <div className={styled.conteudo}>
+          <div className={styled.divEsq}>
             <img src='/images/Stylish.png' width='134' height='59' />
             <img src='/images/embaixoDoLogo.png' wdtch='133' height='20' />
           </div>

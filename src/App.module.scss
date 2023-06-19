@@ -18,16 +18,19 @@ ul {
 
 header {
   display: flex;
-  height: 173px;
+  height: 174px;
 
   .conteudo {
     display: flex;
+    height: 100%;
     align-items: center;
+    justify-content: space-between;
 
   }
 
   nav {
     display: inline-block;
+    width: 470px;
 
     ul li {
       display: inline-block;
@@ -40,5 +43,11 @@ header {
         margin-left: 0px;
       }
     }
+  }
+
+  .divEsq {
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 }
