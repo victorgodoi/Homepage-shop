@@ -1,5 +1,4 @@
 #page,
-header,
 footer {
   display: flex;
   flex-direction: column;
@@ -7,7 +6,10 @@ footer {
 }
 
 .conteudo {
-  width: 1709px;
+  max-width: 1600px;
+  width: 90%;
+  // conta no css = width: calc(100% - 30px);
+
 }
 
 ul {
@@ -19,37 +21,47 @@ ul {
 header {
   display: flex;
   height: 174px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 
-  .conteudo {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-  }
 
   nav {
     display: inline-block;
-    width: 470px;
 
-    ul li {
-      display: inline-block;
-      margin: 0, 30px;
-      //esta com problema!!!
+    ul {
+      display: flex;
 
-      &:last-of-type {
-        margin-right: 0px;
-      }
+      li {
+        display: inline-block;
+        margin: 0 15px;
 
-      &:first-of-type {
-        margin-left: 0px;
+
+        &:last-of-type {
+          margin-right: 0px;
+        }
+
+        &:first-of-type {
+          margin-left: 0px;
+        }
       }
     }
   }
 
   .divEsq {
-    display: flex;
-    height: 100%;
-    align-items: center;
+    img {
+      display: block;
+    }
   }
+}
+
+#box1 {
+  display: flex;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
 }
