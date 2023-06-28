@@ -97,41 +97,97 @@ header {
     flex-direction: column;
     gap: 60px;
 
-    div {
-      &:first-of-type {
-        background-image: url("/images/Foto2Box1.png");
+    // div {
+    //   &:first-of-type {
+    //     background-image: url("/images/Foto2Box1.png");
+
+    //     p {
+    //       color: #ffffff;
+    //     }
+    //   }
+
+    //   h2 {
+    //     font-size: 50px;
+    //     font-weight: 900;
+    //     width: 400px;
+    //     color: #ffffff;
+    //   }
+
+    //   h3 {
+    //     font-size: 50px;
+    //     font-weight: 900;
+    //     width: 400px;
+    //   }
+
+    //   p {
+    //     font-size: 18px;
+    //     font-weight: bold;
+    //     text-decoration: underline;
+    //   }
+
+
+    //   border-radius: 12px;
+    //   background-position: right center;
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   flex: 1;
+    //   background-image: url("/images/Foto3Box1.png");
+    // }
+
+    .divDir1 {
+      border-radius: 12px;
+      background-position: right center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 1;
+      background-image: url("/images/Foto2Box1.png");
+
+      div {
+        margin-left: 10%;
+        margin-top: 15%;
 
         p {
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration: underline;
+          color: #ffffff;
+        }
+
+        h2 {
+          font-size: 50px;
+          font-weight: 900;
+          width: 400px;
           color: #ffffff;
         }
       }
 
-      h2 {
-        font-size: 50px;
-        font-weight: 900;
-        width: 400px;
-        color: #ffffff;
-      }
 
-      h3 {
-        font-size: 50px;
-        font-weight: 900;
-        width: 400px;
-      }
+    }
 
-      p {
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-
-
+    .divDir2 {
       border-radius: 12px;
       background-position: right center;
       background-size: cover;
       background-repeat: no-repeat;
       flex: 1;
       background-image: url("/images/Foto3Box1.png");
+
+      div {
+        margin-left: 10%;
+        margin-top: 15%;
+
+        h3 {
+          font-size: 50px;
+          font-weight: 900;
+          width: 400px;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

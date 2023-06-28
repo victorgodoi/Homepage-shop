@@ -40,13 +40,17 @@ function App() {
             </div>
           </div>
           <div className={styled.divDir}>
-            <div>
-              <h2>Sports Wear</h2>
-              <p>Shop Now</p>
+            <div className={styled.divDir1}>
+              <div>
+                <h2>Sports Wear</h2>
+                <p>Shop Now</p>
+              </div>
             </div>
-            <div>
-              <h3>Fashion Shoes</h3>
-              <p>Shop Now</p>
+            <div className={styled.divDir2}>
+              <div>
+                <h3>Fashion Shoes</h3>
+                <p>Shop Now</p>
+              </div>
             </div>
           </div>
         </div>
