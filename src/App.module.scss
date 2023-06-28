@@ -57,11 +57,81 @@ header {
 
 #box1 {
   display: flex;
+  height: 722px;
+  gap: 60px;
 
-  div {
+  .divEsq {
+    background-image: url("/images/FotoBox1.png");
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+
+    div {
+      margin-left: 10%;
+      margin-bottom: 10%;
+
+      h1 {
+        font-size: 50px;
+        font-weight: 900;
+        width: 400px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+
   }
 
+  .divDir {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    div {
+      &:first-of-type {
+        background-image: url("/images/Foto2Box1.png");
+
+        p {
+          color: #ffffff;
+        }
+      }
+
+      h2 {
+        font-size: 50px;
+        font-weight: 900;
+        width: 400px;
+        color: #ffffff;
+      }
+
+      h3 {
+        font-size: 50px;
+        font-weight: 900;
+        width: 400px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+
+      border-radius: 12px;
+      background-position: right center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 1;
+      background-image: url("/images/Foto3Box1.png");
+    }
+  }
 }

@@ -1,4 +1,8 @@
 import styled from './App.module.scss';
+import Stylish from './images/Stylish.png';
+import EmbaixoDoLogo from './images/embaixoDoLogo.png';
+import Sacola from './images/sacola.png';
+import Carrinho from './images/carrinho.png';
 
 /*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
 "import './App.scss';"
@@ -11,8 +15,8 @@ function App() {
       <div className={styled.conteudo}>
         <header>
           <div className={styled.divEsq}>
-            <img src='/images/Stylish.png' width='134' height='49' />
-            <img src='/images/embaixoDoLogo.png' width='133' height='13' />
+            <img src={Stylish} width='134' height='49' />
+            <img src={EmbaixoDoLogo} width='133' height='13' />
           </div>
           <nav>
             <ul>
@@ -23,20 +27,31 @@ function App() {
               <li>Collections</li>
               <li>Sale</li>
               <li>Blog</li>
-              <li><img src='/images/sacola.png' width='24' height='24' /></li>
-              <li><img src='/images/carrinho.png' width='24' height='24' /></li>
+              <li><img src={Sacola} width='24' height='24' /></li>
+              <li><img src={Carrinho} width='24' height='24' /></li>
             </ul>
           </nav>
         </header>
         <div id={styled.box1}>
-          <img src='/images/FotoBox1.png' width='837' height='722' />
-          <div>
-            <img src='/images/Foto2Box1.png' width='808' height='342' />
-            <img src='/images/Foto3Box1.png' width='808' height='309' />
+          <div className={styled.divEsq}>
+            <div>
+              <h1>Stylish shoes for Women</h1>
+              <p>Shop Now</p>
+            </div>
+          </div>
+          <div className={styled.divDir}>
+            <div>
+              <h2>Sports Wear</h2>
+              <p>Shop Now</p>
+            </div>
+            <div>
+              <h3>Fashion Shoes</h3>
+              <p>Shop Now</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
