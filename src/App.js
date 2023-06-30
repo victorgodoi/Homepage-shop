@@ -55,6 +55,19 @@ function App() {
           </div>
         </div>
       </div>
+      <div className={styled.conteudo2}>
+        <div className={styled.box2}>
+          <div className={styled.divEsq}>
+            <div>
+              <p>10% OFF Discount Coupons</p>
+              <p>Subscribe us to get 10% OFF on all the purchases</p>
+            </div>
+          </div>
+          <div className={styled.divDir}>
+            <button>Email me</button>
+          </div>
+        </div>
+      </div>
     </div >
   );
 }
