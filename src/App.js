@@ -64,7 +64,9 @@ function App() {
             </div>
           </div>
           <div className={styled.divDir}>
-            <button>Email me</button>
+            <div>
+              <button>EMAIL ME</button>
+            </div>
           </div>
         </div>
       </div>
