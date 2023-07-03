@@ -3,6 +3,8 @@ import Stylish from './images/Stylish.png';
 import EmbaixoDoLogo from './images/embaixoDoLogo.png';
 import Sacola from './images/sacola.png';
 import Carrinho from './images/carrinho.png';
+import Foto1Box3 from './images/Foto1Box3.jpg';
+import Foto2Box3 from './images/Foto2Box3.jpg';
 
 /*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
 "import './App.scss';"
@@ -56,7 +58,7 @@ function App() {
         </div>
       </div>
       <div className={styled.conteudo2}>
-        <div className={styled.box2}>
+        <div id={styled.box2}>
           <div className={styled.divEsq}>
             <div>
               <p>10% OFF Discount Coupons</p>
@@ -69,7 +71,31 @@ function App() {
             </div>
           </div>
         </div>
+        <div id={styled.box3}>
+          <div className={styled.titleBox3}>
+            <p>FEATURED PRODUCTS</p>
+            <p>View all</p>
+          </div>
+          <div className={styled.card}>
+            <ul>
+              <li>
+                <div>
+                  <img src={Foto1Box3} width='263' height='263' />
+                  <p>Running shoes for men</p>
+                  <p>$99</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <img src={Foto2Box3} width='263' height='263' />
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </div >
   );
 }
