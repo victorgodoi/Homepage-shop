@@ -1,0 +1,46 @@
+#box3 {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    margin-top: 150px;
+
+
+    .titleBox3 {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        margin-bottom: 50px;
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+
+            &:first-of-type {
+                font-size: 28px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .card {
+        display: flex;
+        gap: 30px;
+
+        li {
+            flex: 1;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .textCard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+    }
+}

@@ -3,8 +3,18 @@ import Stylish from './images/Stylish.png';
 import EmbaixoDoLogo from './images/embaixoDoLogo.png';
 import Sacola from './images/sacola.png';
 import Carrinho from './images/carrinho.png';
+import ProductsList from './components/ProductsList';
 import Foto1Box3 from './images/Foto1Box3.jpg';
 import Foto2Box3 from './images/Foto2Box3.jpg';
+import Foto3Box3 from './images/Foto3Box3.jpg';
+import Foto4Box3 from './images/Foto4Box3.jpg';
+import Foto5Box3 from './images/Foto5Box3.jpg';
+import Foto1Box5 from './images/Foto1Box5.png';
+import Foto3Box5 from './images/Foto3Box5.png';
+import Foto5Box5 from './images/Foto5Box5.png';
+
+const list1 = [Foto1Box3, Foto2Box3, Foto3Box3, Foto4Box3, Foto5Box3]
+const list2 = [Foto1Box5, Foto2Box3, Foto3Box5, Foto4Box3, Foto5Box5]
 
 /*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
 "import './App.scss';"
@@ -71,31 +81,26 @@ function App() {
             </div>
           </div>
         </div>
-        <div id={styled.box3}>
-          <div className={styled.titleBox3}>
-            <p>FEATURED PRODUCTS</p>
-            <p>View all</p>
+        <ProductsList title='FEATURED PRODUCTS' images={list1} />
+        <div id={styled.box4}>
+          <div className={styled.divEsq}>
+            <div>
+              <h4>Minimal Collection</h4>
+              <p>Shop Now</p>
+            </div>
           </div>
-          <div className={styled.card}>
-            <ul>
-              <li>
-                <div>
-                  <img src={Foto1Box3} width='263' height='263' />
-                  <p>Running shoes for men</p>
-                  <p>$99</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img src={Foto2Box3} width='263' height='263' />
-                  <p></p>
-                </div>
-              </li>
-            </ul>
+          <div className={styled.divDir}>
+            <div>
+              <h5>Sneakers</h5>
+              <p>Shop Now</p>
+            </div>
           </div>
         </div>
+        <ProductsList title='Latest Products' images={list2} />
+        <div id={styled.box6}>
+          <strong>BOX6</strong>
+        </div>
       </div>
-
     </div >
   );
 }
