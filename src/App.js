@@ -98,9 +98,73 @@ function App() {
         </div>
         <ProductsList title='Latest Products' images={list2} />
         <div id={styled.box6}>
-          <strong>BOX6</strong>
+          <ul>
+            <li>Info</li>
+            <li>Track Your Order</li>
+            <li>Our Blog</li>
+            <li>Privacy policy</li>
+            <li>Shipping</li>
+            <li>Contact Us</li>
+            <li>Help</li>
+            <li>Community</li>
+          </ul>
+          <ul>
+            <li>About Jatra</li>
+            <li>Our Story</li>
+            <li>Job Opportunities</li>
+            <li>Wholesale</li>
+            <li>Affiliates</li>
+          </ul>
+          <ul>
+            <li>Women Clothing</li>
+            <li>Intimates</li>
+            <li>Accessories</li>
+            <li>Shoes</li>
+            <li>Beauty + Wellness</li>
+            <li>Swim</li>
+            <li>Activewear</li>
+            <li>Sale</li>
+          </ul>
+          <ul>
+            <li>Jeans</li>
+            <li>Shop All Jeans</li>
+            <li>New Jeans</li>
+            <li>Flare Jeans</li>
+            <li>High-Rise Jeans</li>
+            <li>Skinny Jeans</li>
+            <li>Wide-Leg Jeans</li>
+            <li>Boyfriend Jeans</li>
+            <li>Straight-Leg Jeans</li>
+          </ul>
+          <ul>
+            <li>Mens Shoes</li>
+            <li>Heels + Wedges</li>
+            <li>Sandals</li>
+            <li>Slippers</li>
+            <li>Socks + Tights</li>
+            <li>Top Rated</li>
+            <li>Sale</li>
+          </ul>
+          <ul>
+            <li>Mens Clothing</li>
+            <li>T-Shirts</li>
+            <li>Shirts</li>
+            <li>Shorts</li>
+            <li>Jeans</li>
+            <li>Trousers</li>
+            <li>Clothing Sets</li>
+            <li>Ethnic Wear</li>
+            <li>Sweatshirts</li>
+            <li>Innerwear</li>
+          </ul>
         </div>
       </div>
+      <footer>
+        <div>
+          <p>© JATRA Copyrights 2021. Designed by </p>
+          <strong>Templates Jungle</strong>
+        </div>
+      </footer>
     </div >
   );
 }
