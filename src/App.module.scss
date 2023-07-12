@@ -324,6 +324,26 @@ footer {
 
     .divDir {
       gap: 40px;
+
+      .divDir1 {
+        div {
+          height: 200px;
+        }
+      }
+
+      .divDir2 {
+        div {
+          height: 200px;
+        }
+      }
+    }
+
+    .divEsq {
+      div {
+        margin-bottom: 0;
+        margin-top: 150px;
+        height: 300px;
+      }
     }
   }
 
