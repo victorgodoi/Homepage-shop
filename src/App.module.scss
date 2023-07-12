@@ -300,24 +300,56 @@ header {
   }
 }
 
-Footer {
-  background-image: url('/images/FashionStore.png');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-  height: 215px;
+footer {
   width: 100%;
   margin-top: 100px;
+  text-align: center;
 
-  div {
-    display: flex;
+}
 
-    p {
-      &:first-of-type {
-        margin-right: 3px;
-      }
+@media only screen and (max-width: 1000px) {
+
+  header {
+
+    .navMobile {
+      display: none;
     }
   }
 
-  //ARRUMAR A IMAGEM DE FUNDO DO FOOTER E ARRUMAR "MARGIN-BOTTOM" DO COMPONENTE
+
+  #box1 {
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+
+    .divDir {
+      gap: 40px;
+    }
+  }
+
+  .conteudo2 {
+    width: 90%;
+
+    #box2 {
+      margin-top: 100px;
+      padding: 0 20px;
+
+      .divEsq {
+        flex: 2;
+
+        p {
+          &:first-of-type {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+  }
+
+  #box4 {
+    flex-direction: column;
+    height: 700px;
+  }
+
 }

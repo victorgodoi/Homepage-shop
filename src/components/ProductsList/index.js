@@ -1,14 +1,28 @@
 import styled from './ProductsList.module.scss';
+import { useMediaQuery } from 'react-responsive';
 
 const ProductsList = ({ title, images }) => {
+    const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+    let imagesFilter = images
+
+    if (isMobile === true) {
+        imagesFilter = images.filter((item, index) => {
+            if (index < 3) {
+                return true
+            } else {
+                return false
+            }
+        })
+    }
+
     return (
-        < div id={styled.box3} >
+        < div className={styled.box3} >
             <div className={styled.titleBox3}>
                 <p>{title}</p>
                 <p>View all</p>
             </div>
             <ul className={styled.card}>
-                {images.map(item => {
+                {imagesFilter.map(item => {
                     return (
                         <li>
                             <div>
@@ -25,5 +39,7 @@ const ProductsList = ({ title, images }) => {
         </div >
     )
 }
+
+
 
 export default ProductsList

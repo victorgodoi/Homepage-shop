@@ -12,6 +12,7 @@ import Foto5Box3 from './images/Foto5Box3.jpg';
 import Foto1Box5 from './images/Foto1Box5.png';
 import Foto3Box5 from './images/Foto3Box5.png';
 import Foto5Box5 from './images/Foto5Box5.png';
+import FashionStore from './images/FashionStore.png';
 
 const list1 = [Foto1Box3, Foto2Box3, Foto3Box3, Foto4Box3, Foto5Box3]
 const list2 = [Foto1Box5, Foto2Box3, Foto3Box5, Foto4Box3, Foto5Box5]
@@ -32,10 +33,10 @@ function App() {
           </div>
           <nav>
             <ul>
-              <li>Home</li>
+              <li className={styled.navMobile}>Home</li>
               <li>Men</li>
               <li>Women</li>
-              <li>Trends</li>
+              <li className={styled.navMobile}>Trends</li>
               <li>Collections</li>
               <li>Sale</li>
               <li>Blog</li>
@@ -161,8 +162,8 @@ function App() {
       </div>
       <footer>
         <div>
-          <p>© JATRA Copyrights 2021. Designed by </p>
-          <strong>Templates Jungle</strong>
+          <p>© JATRA Copyrights 2021. Designed by <strong>Templates Jungle</strong></p>
+          <img src={FashionStore} width='100%' height='auto' />
         </div>
       </footer>
     </div >
