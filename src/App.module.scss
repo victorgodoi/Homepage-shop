@@ -278,8 +278,10 @@ header {
 
 #box6 {
   margin-top: 150px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px 0;
+
 
 
   ul {
@@ -373,4 +375,7 @@ footer {
     margin-top: 100px;
   }
 
+  #box6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -4,18 +4,8 @@ import EmbaixoDoLogo from './images/embaixoDoLogo.png';
 import Sacola from './images/sacola.png';
 import Carrinho from './images/carrinho.png';
 import ProductsList from './components/ProductsList';
-import Foto1Box3 from './images/Foto1Box3.jpg';
-import Foto2Box3 from './images/Foto2Box3.jpg';
-import Foto3Box3 from './images/Foto3Box3.jpg';
-import Foto4Box3 from './images/Foto4Box3.jpg';
-import Foto5Box3 from './images/Foto5Box3.jpg';
-import Foto1Box5 from './images/Foto1Box5.png';
-import Foto3Box5 from './images/Foto3Box5.png';
-import Foto5Box5 from './images/Foto5Box5.png';
 import FashionStore from './images/FashionStore.png';
-
-const list1 = [Foto1Box3, Foto2Box3, Foto3Box3, Foto4Box3, Foto5Box3]
-const list2 = [Foto1Box5, Foto2Box3, Foto3Box5, Foto4Box3, Foto5Box5]
+import { useState, useEffect } from 'react';
 
 /*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
 "import './App.scss';"
@@ -23,6 +13,41 @@ const list2 = [Foto1Box5, Foto2Box3, Foto3Box5, Foto4Box3, Foto5Box5]
 */
 
 function App() {
+
+  const [featured, atualizarFeatured] = useState([])
+  const [latest, atualizarLatest] = useState([])
+
+
+  const fetchData = () => {
+    fetch('https://mabkxpvmoabhozufruai.supabase.co/rest/v1/featured', {
+      headers: {
+        'apikey': process.env.REACT_APP_APIKEY,
+        'Authorization': `Bearer ${process.env.REACT_APP_SECRET}`
+      }
+    }).then(async response => {
+      const responseJson = await response.json()
+      atualizarFeatured(responseJson)
+    }).catch(erro => {
+      console.log(erro.message)
+    })
+
+    fetch('https://mabkxpvmoabhozufruai.supabase.co/rest/v1/latest', {
+      headers: {
+        'apikey': process.env.REACT_APP_APIKEY,
+        'Authorization': `Bearer ${process.env.REACT_APP_SECRET}`
+      }
+    }).then(async response => {
+      const responseJson = await response.json()
+      atualizarLatest(responseJson)
+    }).catch(erro => {
+      console.log(erro.message)
+    })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <div id={styled.page}>
       <div className={styled.conteudo}>
@@ -82,7 +107,7 @@ function App() {
             </div>
           </div>
         </div>
-        <ProductsList title='FEATURED PRODUCTS' images={list1} />
+        <ProductsList title='FEATURED PRODUCTS' data={featured} />
         <div id={styled.box4}>
           <div className={styled.divEsq}>
             <div>
@@ -97,7 +122,7 @@ function App() {
             </div>
           </div>
         </div>
-        <ProductsList title='Latest Products' images={list2} />
+        <ProductsList title='Latest Products' data={latest} />
         <div id={styled.box6}>
           <ul>
             <li>Info</li>
