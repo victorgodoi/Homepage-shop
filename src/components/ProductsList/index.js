@@ -2,12 +2,23 @@ import styled from './ProductsList.module.scss';
 import { useMediaQuery } from 'react-responsive';
 
 const ProductsList = ({ title, data }) => {
-    const isMobile = useMediaQuery({ query: '(max-width: 1000px)' })
+    const isTablet = useMediaQuery({ query: '(max-width: 1000px) and (min-width: 811px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 810px)' })
     let dataFilter = data
+
+    if (isTablet === true) {
+        dataFilter = data?.filter((item, index) => {
+            if (index < 3) {
+                return true
+            } else {
+                return false
+            }
+        })
+    }
 
     if (isMobile === true) {
         dataFilter = data?.filter((item, index) => {
-            if (index < 3) {
+            if (index < 1) {
                 return true
             } else {
                 return false

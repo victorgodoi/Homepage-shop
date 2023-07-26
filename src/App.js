@@ -16,6 +16,7 @@ function App() {
 
   const [featured, atualizarFeatured] = useState([])
   const [latest, atualizarLatest] = useState([])
+  const [menuOpen, atualizarMenu] = useState(false)
 
 
   const fetchData = () => {
@@ -48,6 +49,7 @@ function App() {
     fetchData()
   }, [])
 
+
   return (
     <div id={styled.page}>
       <div className={styled.conteudo}>
@@ -55,6 +57,19 @@ function App() {
           <div className={styled.divEsq}>
             <img src={Stylish} width='134' height='49' />
             <img src={EmbaixoDoLogo} width='133' height='13' />
+          </div>
+          <div id={styled.mobileMenu} className={menuOpen ? styled.open : ''}>
+            <ul>
+              <li>Home</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>Trends</li>
+              <li>Collections</li>
+              <li>Sale</li>
+              <li>Blog</li>
+              <li><img src={Sacola} width='24' height='24' /></li>
+              <li><img src={Carrinho} width='24' height='24' /></li>
+            </ul>
           </div>
           <nav>
             <ul>
@@ -69,6 +84,12 @@ function App() {
               <li><img src={Carrinho} width='24' height='24' /></li>
             </ul>
           </nav>
+          <div onClick={() => {
+            atualizarMenu(valor => !valor)
+          }} className={`${styled.menu} ${menuOpen ? styled.open : ''}`}>
+            <div className={styled.iconLeft}></div>
+            <div className={styled.iconRight}></div>
+          </div>
         </header>
         <div id={styled.box1}>
           <div className={styled.divEsq}>
