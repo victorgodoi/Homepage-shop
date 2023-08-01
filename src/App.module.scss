@@ -407,6 +407,10 @@ footer {
   #box1 {
     .divEsq {
       div {
+        height: 200px;
+        margin-right: 10px;
+        margin-top: 100px;
+
         h1 {
           font-size: 25px;
           width: auto;
@@ -417,6 +421,8 @@ footer {
     .divDir {
       .divDir1 {
         div {
+          height: 150px;
+
           h2 {
             font-size: 25px;
             width: auto;
@@ -426,6 +432,8 @@ footer {
 
       .divDir2 {
         div {
+          height: 150px;
+
           h3 {
             font-size: 25px;
             width: auto;
