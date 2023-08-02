@@ -6,6 +6,7 @@ import Carrinho from './images/carrinho.png';
 import ProductsList from './components/ProductsList';
 import FashionStore from './images/FashionStore.png';
 import { useState, useEffect } from 'react';
+import Menu from './components/Menu';
 
 /*quando não está usando css ou scss Modulos só precisa importar o estilo dessa forma por exemplo:
 "import './App.scss';"
@@ -58,19 +59,6 @@ function App() {
             <img src={Stylish} width='134' height='49' />
             <img src={EmbaixoDoLogo} width='133' height='13' />
           </div>
-          <div id={styled.mobileMenu} className={menuOpen ? styled.open : ''}>
-            <ul>
-              <li>Home</li>
-              <li>Men</li>
-              <li>Women</li>
-              <li>Trends</li>
-              <li>Collections</li>
-              <li>Sale</li>
-              <li>Blog</li>
-              <li><img src={Sacola} width='24' height='24' /></li>
-              <li><img src={Carrinho} width='24' height='24' /></li>
-            </ul>
-          </div>
           <nav>
             <ul>
               <li className={styled.navMobile}>Home</li>
@@ -84,12 +72,9 @@ function App() {
               <li><img src={Carrinho} width='24' height='24' /></li>
             </ul>
           </nav>
-          <div onClick={() => {
+          <Menu menuOpen={menuOpen} onClick={() => {
             atualizarMenu(valor => !valor)
-          }} className={`${styled.menu} ${menuOpen ? styled.open : ''}`}>
-            <div className={styled.iconLeft}></div>
-            <div className={styled.iconRight}></div>
-          </div>
+          }} />
         </header>
         <div id={styled.box1}>
           <div className={styled.divEsq}>

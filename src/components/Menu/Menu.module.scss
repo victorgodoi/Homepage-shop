@@ -1,0 +1,154 @@
+$color: #000;
+
+
+@mixin btn($right, $top) {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: $top;
+    right: $right;
+    transition-duration: 0.5s;
+}
+
+@mixin icon($height, $width) {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: $height;
+    width: $width;
+    top: 30px;
+    background-color: $color;
+}
+
+@mixin icon-before($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    content: "";
+    top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    content: "";
+    top: $top;
+}
+
+.icone {
+    @include btn(5%, 50px);
+
+    &.open {
+        position: fixed;
+
+        .iconLeft {
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &:before {
+                background-color: #fff;
+                transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+            }
+
+            &:after {
+                background-color: #fff;
+                transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+            }
+        }
+
+        .iconRight {
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &:before {
+                background-color: #fff;
+                transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+            }
+
+            &:after {
+                background-color: #fff;
+                transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    .iconLeft {
+        @include icon(4px, 15px);
+        left: 0px;
+
+        &:before {
+            @include icon-before(4px, 15px, -10px);
+        }
+
+        &:after {
+            @include icon-after(4px, 15px, 10px);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .iconRight {
+        @include icon(4px, 15px);
+        left: 15px;
+
+        &:before {
+            @include icon-before(4px, 15px, -10px);
+        }
+
+        &:after {
+            @include icon-after(4px, 15px, 10px);
+        }
+    }
+}
+
+#mobileMenu {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media only screen and (max-width: 810px) {
+
+    .menu {
+        display: block;
+    }
+
+    #mobileMenu {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #000000d6;
+
+        &.open {
+            display: block;
+        }
+
+        ul {
+            margin-top: 65px;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+
+}
