@@ -207,6 +207,7 @@ header {
       font-size: 18px;
       font-weight: bold;
       color: #ffffff;
+      border: none;
     }
   }
 }
@@ -437,6 +438,38 @@ footer {
           }
         }
       }
+    }
+  }
+
+  .conteudo2 {
+    #box2 {
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      height: auto;
+      background-image: none;
+
+      .divEsq {
+
+        p {
+          &:first-of-type {
+            font-size: 20px;
+          }
+
+          font-size: 15px;
+        }
+      }
+
+      .divDir {
+        div {
+          button {
+            height: 40px;
+            font-size: 16px;
+          }
+        }
+      }
+
     }
   }
 

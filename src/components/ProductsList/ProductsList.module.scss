@@ -14,10 +14,12 @@
             font-size: 18px;
             font-weight: bold;
             text-decoration: underline;
+            flex: none;
 
             &:first-of-type {
                 font-size: 28px;
                 text-decoration: none;
+                flex: 1;
             }
         }
     }
